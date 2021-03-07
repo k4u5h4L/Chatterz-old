@@ -18,7 +18,8 @@
             "@/components/*": ["components/*"],
             "@/constants/*": ["constants/*"],
             "@/types/*": ["@types/*"],
-            "@/prisma/*": ["prisma/*"]
+            "@/prisma/*": ["prisma/*"],
+            "@/node_modules/*": ["node_modules/*"]
         }
     },
     "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

@@ -98,7 +98,7 @@ export default function Navbar() {
                     <li className="nav-item dropdown profile-user-dropdown d-inline-block d-lg-none">
                         <a
                             className="nav-link dropdown-toggle"
-                            href="javascript: void(0);"
+                            href="#"
                             role="button"
                             data-toggle="dropdown"
                             aria-haspopup="true"
