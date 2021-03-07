@@ -7,7 +7,7 @@ import { Message } from "@/node_modules/.prisma/client/index.d.ts";
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const messages: Message[] = await prisma.message.findMany();
-    console.log(messages);
+    // console.log(messages);
 
     return {
         props: {
