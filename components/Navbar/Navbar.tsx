@@ -3,7 +3,7 @@ import Logo from "../Logo/Logo";
 
 export default function Navbar() {
     return (
-        <>
+        <div className="side-menu flex-lg-column mr-lg-1">
             <Logo />
             <div className="flex-lg-column my-auto">
                 <ul
@@ -128,6 +128,56 @@ export default function Navbar() {
                     </li>
                 </ul>
             </div>
-        </>
+
+            <div className="flex-lg-column d-none d-lg-block">
+                <ul className="nav side-menu-nav justify-content-center">
+                    <li className="nav-item">
+                        <a
+                            className="nav-link"
+                            id="light-dark"
+                            href="#"
+                            data-toggle="tooltip"
+                            data-trigger="hover"
+                            data-placement="right"
+                            title="Dark / Light Mode"
+                        >
+                            <i className="ri-sun-line theme-mode-icon"></i>
+                        </a>
+                    </li>
+
+                    <li className="nav-item btn-group dropup profile-user-dropdown">
+                        <a
+                            className="nav-link dropdown-toggle"
+                            href="#"
+                            role="button"
+                            data-toggle="dropdown"
+                            aria-haspopup="true"
+                            aria-expanded="false"
+                        >
+                            <img
+                                src="assets/images/users/avatar-1.jpg"
+                                alt=""
+                                className="profile-user rounded-circle"
+                            />
+                        </a>
+                        <div className="dropdown-menu">
+                            <a className="dropdown-item" href="#">
+                                Profile{" "}
+                                <i className="ri-profile-line float-right text-muted"></i>
+                            </a>
+                            <a className="dropdown-item" href="#">
+                                Setting
+                                <i className="ri-settings-3-line float-right text-muted"></i>
+                            </a>
+                            <div className="dropdown-divider"></div>
+                            <a className="dropdown-item" href="#">
+                                Log out
+                                <i className="ri-logout-circle-r-line float-right text-muted"></i>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
     );
 }
