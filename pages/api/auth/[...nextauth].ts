@@ -37,8 +37,8 @@ export default (req, res) =>
             // signIn: "/auth/signin",
             signIn: "/welcome",
             signOut: "/auth/signout",
-            error: "/auth/error", // Error code passed in query string as ?error=
-            verifyRequest: "/login/verify-request", // (used for check email message)
+            error: "/welcome/error", // Error code passed in query string as ?error=
+            verifyRequest: "/welcome/verify-request", // (used for check email message)
             newUser: null, // If set, new users will be directed here on first sign in
         },
     });
