@@ -207,6 +207,11 @@ export default function Settings() {
                                                         className="custom-control-input"
                                                         id="privacy-lastseenSwitch"
                                                         checked
+                                                        onChange={() =>
+                                                            console.log(
+                                                                "checked!"
+                                                            )
+                                                        }
                                                     />
                                                     <label
                                                         className="custom-control-label"
@@ -273,6 +278,11 @@ export default function Settings() {
                                                         className="custom-control-input"
                                                         id="privacy-readreceiptSwitch"
                                                         checked
+                                                        onChange={() =>
+                                                            console.log(
+                                                                "checked!"
+                                                            )
+                                                        }
                                                     />
                                                     <label
                                                         className="custom-control-label"

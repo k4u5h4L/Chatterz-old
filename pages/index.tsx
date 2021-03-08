@@ -1,4 +1,4 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import { GetStaticProps } from "next";
 import prisma from "@/prisma/client";
 
@@ -10,6 +10,8 @@ import Chats from "@/components/Chats/Chats";
 import Groups from "@/components/Groups/Groups";
 import Contacts from "@/components/Contacts/Contacts";
 import Settings from "@/components/Settings/Settings";
+import Convo from "@/components/Convo/Convo";
+import Profile from "@/components/Profile/Profile";
 
 export const getStaticProps: GetStaticProps = async (context) => {
     const messages: Message[] = await prisma.message.findMany();
@@ -23,7 +25,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
     };
 };
 
-export default function Home({ messages }: MessageProps) {
+export default function Home({ messages }: MessageProps): ReactNode {
     return (
         <div className="layout-wrapper d-lg-flex">
             <Navbar />
@@ -34,6 +36,13 @@ export default function Home({ messages }: MessageProps) {
                     <Groups />
                     <Contacts />
                     <Settings />
+                </div>
+            </div>
+
+            <div className="user-chat w-100">
+                <div className="d-lg-flex">
+                    <Convo />
+                    <Profile />
                 </div>
             </div>
         </div>
