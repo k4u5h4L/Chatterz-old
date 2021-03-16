@@ -9,6 +9,7 @@
 temp/
 temp-old/
 media/
+dist/
 
 # pwa stuff
 public/sw.js

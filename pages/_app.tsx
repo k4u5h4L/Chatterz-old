@@ -4,6 +4,8 @@ import Head from "next/head";
 import { Provider } from "next-auth/client";
 import type { AppProps /*, AppContext */ } from "next/app";
 
+import NextNprogress from "nextjs-progressbar";
+
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <Provider session={pageProps.session}>
@@ -27,6 +29,12 @@ function MyApp({ Component, pageProps }: AppProps) {
                 />
                 <title>Chatterz</title>
             </Head>
+            <NextNprogress
+                color="#8e4aec"
+                startPosition={0.3}
+                stopDelayMs={200}
+                height={3}
+            />
             <Component {...pageProps} />
         </Provider>
     );

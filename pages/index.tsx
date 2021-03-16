@@ -4,7 +4,7 @@ import prisma from "@/prisma/client";
 
 import Navbar from "@/components/Navbar/Navbar";
 import { MessageProps } from "@/types/index";
-import { Message } from "@/node_modules/.prisma/client/index.d.ts";
+import { Message } from "@/types/index";
 import ProfileDesc from "@/components/ProfileDesc/ProfileDesc";
 import Chats from "@/components/Chats/Chats";
 import Groups from "@/components/Groups/Groups";

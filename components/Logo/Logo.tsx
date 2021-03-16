@@ -5,13 +5,21 @@ export default function Logo() {
         <div className="navbar-brand-box">
             <a href="index.html" className="logo logo-dark">
                 <span className="logo-sm">
-                    <img src="/assets/images/logo.svg" alt="" height="30" />
+                    <img
+                        src="/assets/images/icon-logo.png"
+                        alt=""
+                        height="30"
+                    />
                 </span>
             </a>
 
             <a href="index.html" className="logo logo-light">
                 <span className="logo-sm">
-                    <img src="/assets/images/logo.svg" alt="" height="30" />
+                    <img
+                        src="/assets/images/icon-logo.png"
+                        alt=""
+                        height="30"
+                    />
                 </span>
             </a>
         </div>
