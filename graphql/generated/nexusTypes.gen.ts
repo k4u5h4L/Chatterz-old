@@ -19,6 +19,9 @@ declare global {
 }
 
 export interface NexusGenInputs {
+  MessageWhereUniqueInput: { // input type
+    id?: number | null; // Int
+  }
 }
 
 export interface NexusGenEnums {
@@ -58,7 +61,8 @@ export interface NexusGenFieldTypes {
     id: number; // Int!
   }
   Query: { // field return type
-    GetMessages: Array<NexusGenRootTypes['Message'] | null> | null; // [Message]
+    message: NexusGenRootTypes['Message'] | null; // Message
+    messages: NexusGenRootTypes['Message'][]; // [Message!]!
   }
 }
 
@@ -69,11 +73,23 @@ export interface NexusGenFieldTypeNames {
     id: 'Int'
   }
   Query: { // field return type name
-    GetMessages: 'Message'
+    message: 'Message'
+    messages: 'Message'
   }
 }
 
 export interface NexusGenArgTypes {
+  Query: {
+    message: { // args
+      where: NexusGenInputs['MessageWhereUniqueInput']; // MessageWhereUniqueInput!
+    }
+    messages: { // args
+      after?: NexusGenInputs['MessageWhereUniqueInput'] | null; // MessageWhereUniqueInput
+      before?: NexusGenInputs['MessageWhereUniqueInput'] | null; // MessageWhereUniqueInput
+      first?: number | null; // Int
+      last?: number | null; // Int
+    }
+  }
 }
 
 export interface NexusGenAbstractTypeMembers {
@@ -84,7 +100,7 @@ export interface NexusGenTypeInterfaces {
 
 export type NexusGenObjectNames = keyof NexusGenObjects;
 
-export type NexusGenInputNames = never;
+export type NexusGenInputNames = keyof NexusGenInputs;
 
 export type NexusGenEnumNames = never;
 

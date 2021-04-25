@@ -8,6 +8,11 @@ type Message {
   id: Int!
 }
 
+input MessageWhereUniqueInput {
+  id: Int
+}
+
 type Query {
-  GetMessages: [Message]
+  message(where: MessageWhereUniqueInput!): Message
+  messages(after: MessageWhereUniqueInput, before: MessageWhereUniqueInput, first: Int, last: Int): [Message!]!
 }

@@ -5,7 +5,20 @@ import * as types from "./Types";
 
 export const schema = makeSchema({
     types,
-    plugins: [nexusSchemaPrisma({ experimentalCRUD: true })],
+    plugins: [
+        nexusSchemaPrisma({
+            experimentalCRUD: true,
+            prismaClient: path.join(process.cwd(), "prisma", "client.ts"),
+            outputs: {
+                typegen: path.join(
+                    process.cwd(),
+                    "graphql",
+                    "generated",
+                    "nexusPrismaTypes.gen.ts"
+                ),
+            },
+        }),
+    ],
     outputs: {
         schema: path.join(process.cwd(), "schema.graphql"),
         typegen: path.join(
