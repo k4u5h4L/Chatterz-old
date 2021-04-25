@@ -1,3 +1,4 @@
 export * from "./Query";
-export * from "./Message";
+export * from "./Mutation";
 export * from "./Subscription";
+export * from "./Message";

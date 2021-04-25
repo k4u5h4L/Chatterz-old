@@ -8,8 +8,17 @@ type Message {
   id: Int!
 }
 
+input MessageCreateInput {
+  content: String!
+  date: String!
+}
+
 input MessageWhereUniqueInput {
   id: Int
+}
+
+type Mutation {
+  createOneMessage(data: MessageCreateInput!): Message!
 }
 
 type Query {
