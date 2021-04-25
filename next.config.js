@@ -7,3 +7,25 @@ const runtimeCaching = require("next-pwa/cache");
 //         runtimeCaching,
 //     },
 // });
+
+module.exports = {
+    images: {
+        domains: [
+            "localhost:3000",
+            "localhost",
+            "chatterz.vercel.app",
+            "vercel.com",
+            // below are arbitrary links for random images
+
+        ],
+    },
+    // async redirects() {
+    //     return [
+    //         {
+    //             source: "/shop",
+    //             destination: "/shop/1",
+    //             permanent: true,
+    //         },
+    //     ];
+    // },
+};

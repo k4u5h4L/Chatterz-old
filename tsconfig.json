@@ -19,6 +19,9 @@
             "@/constants/*": ["constants/*"],
             "@/types/*": ["@types/*"],
             "@/prisma/*": ["prisma/*"],
+            "@/graphql/*": ["graphql/*"],
+            "@/utils/*": ["utils/*"],
+            "@/helpers/*": ["helpers/*"],
             "@/node_modules/*": ["node_modules/*"]
         }
     },
