@@ -8,15 +8,15 @@ export const schema = makeSchema({
     plugins: [
         nexusSchemaPrisma({
             experimentalCRUD: true,
-            prismaClient: path.join(process.cwd(), "prisma", "client.ts"),
-            outputs: {
-                typegen: path.join(
-                    process.cwd(),
-                    "graphql",
-                    "generated",
-                    "nexusPrismaTypes.gen.ts"
-                ),
-            },
+            // prismaClient: path.join(process.cwd(), "prisma", "client.ts"),
+            // outputs: {
+            //     typegen: path.join(
+            //         process.cwd(),
+            //         "graphql",
+            //         "generated",
+            //         "nexusPrismaTypes.gen.ts"
+            //     ),
+            // },
         }),
     ],
     outputs: {

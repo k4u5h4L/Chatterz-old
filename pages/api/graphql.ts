@@ -58,7 +58,7 @@ const graphqlWithSubscriptionHandler = (
         oldOne &&
         oldOne !== apolloServer
     ) {
-        console.warn("FIXING HOT RELOAD !!!!!!!!!!!!!!! ");
+        // console.warn("FIXING HOT RELOAD !!!!!!!!!!!!!!! ");
         delete res.socket.server.apolloServer;
     }
 

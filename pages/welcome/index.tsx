@@ -186,7 +186,7 @@ export default function Welcome(): ReactNode {
                                     <button
                                         className="btn btn-primary waves-effect waves-light"
                                         type="button"
-                                        onClick={signOut}
+                                        onClick={() => signOut()}
                                     >
                                         Logout
                                     </button>

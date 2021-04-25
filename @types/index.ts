@@ -1,7 +1,7 @@
 interface MessageType {
     id: number;
     content: string;
-    date: Date;
+    date: string;
 }
 [];
 
@@ -12,5 +12,5 @@ export interface MessageProps {
 export type Message = {
     id: number;
     content: string;
-    date: Date;
+    date: string;
 };
