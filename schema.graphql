@@ -16,3 +16,7 @@ type Query {
   message(where: MessageWhereUniqueInput!): Message
   messages(after: MessageWhereUniqueInput, before: MessageWhereUniqueInput, first: Int, last: Int): [Message!]!
 }
+
+type Subscription {
+  messageSub: Message
+}

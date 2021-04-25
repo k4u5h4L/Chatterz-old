@@ -42,6 +42,7 @@ export interface NexusGenObjects {
     id: number; // Int!
   }
   Query: {};
+  Subscription: {};
 }
 
 export interface NexusGenInterfaces {
@@ -64,6 +65,9 @@ export interface NexusGenFieldTypes {
     message: NexusGenRootTypes['Message'] | null; // Message
     messages: NexusGenRootTypes['Message'][]; // [Message!]!
   }
+  Subscription: { // field return type
+    messageSub: NexusGenRootTypes['Message'] | null; // Message
+  }
 }
 
 export interface NexusGenFieldTypeNames {
@@ -75,6 +79,9 @@ export interface NexusGenFieldTypeNames {
   Query: { // field return type name
     message: 'Message'
     messages: 'Message'
+  }
+  Subscription: { // field return type name
+    messageSub: 'Message'
   }
 }
 

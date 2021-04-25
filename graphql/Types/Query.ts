@@ -5,6 +5,8 @@ import { Message } from "./index";
 
 export const Query = queryType({
     definition(t) {
+        // a more in depth approach
+
         // t.list.field("GetMessages", {
         //     type: Message,
         //     resolve: (_root, _args, ctx) => {
