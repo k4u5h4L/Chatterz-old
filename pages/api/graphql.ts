@@ -1,9 +1,12 @@
 import { ApolloServer } from "apollo-server-micro";
+import { PubSub } from "graphql-subscriptions";
 import { NextApiRequest, NextApiResponse } from "next";
 import { getSession } from "next-auth/client";
 import { schema } from "@/graphql/schema";
 // import { createContext } from "@/prisma/client";
 import prisma from "@/prisma/client";
+
+const pubsub = new PubSub();
 
 const apolloServer = new ApolloServer({
     schema,
@@ -12,7 +15,7 @@ const apolloServer = new ApolloServer({
         const session = await getSession({ req });
 
         // return { db, dataloaders, userSession };
-        return { session, prisma };
+        return { session, prisma, pubsub };
     },
     subscriptions: {
         path: "/api/graphqlSubscriptions",

@@ -19,6 +19,10 @@ declare global {
 }
 
 export interface NexusGenInputs {
+  MessageCreateInput: { // input type
+    content: string; // String!
+    date: string; // String!
+  }
   MessageWhereUniqueInput: { // input type
     id?: number | null; // Int
   }
@@ -41,6 +45,7 @@ export interface NexusGenObjects {
     date: string; // String!
     id: number; // Int!
   }
+  Mutation: {};
   Query: {};
   Subscription: {};
 }
@@ -61,6 +66,9 @@ export interface NexusGenFieldTypes {
     date: string; // String!
     id: number; // Int!
   }
+  Mutation: { // field return type
+    createOneMessage: NexusGenRootTypes['Message']; // Message!
+  }
   Query: { // field return type
     message: NexusGenRootTypes['Message'] | null; // Message
     messages: NexusGenRootTypes['Message'][]; // [Message!]!
@@ -76,6 +84,9 @@ export interface NexusGenFieldTypeNames {
     date: 'String'
     id: 'Int'
   }
+  Mutation: { // field return type name
+    createOneMessage: 'Message'
+  }
   Query: { // field return type name
     message: 'Message'
     messages: 'Message'
@@ -86,6 +97,11 @@ export interface NexusGenFieldTypeNames {
 }
 
 export interface NexusGenArgTypes {
+  Mutation: {
+    createOneMessage: { // args
+      data: NexusGenInputs['MessageCreateInput']; // MessageCreateInput!
+    }
+  }
   Query: {
     message: { // args
       where: NexusGenInputs['MessageWhereUniqueInput']; // MessageWhereUniqueInput!
